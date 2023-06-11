@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "delay": "^6.0.0",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.10.0"
+  },
+  "devDependencies": {
+    "parallelshell": "^3.0.1"
+  },
+  "scripts": {
+    "test": "mocha — timeout 10000",
+    "start": "node server.js"
+  }
+}
