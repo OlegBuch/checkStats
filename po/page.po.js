@@ -2,8 +2,11 @@ const { By, Builder, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const { CREDS, URLS } = require('../settings/settings');
 let driver = new Builder().forBrowser('chrome')
-.setChromeOptions(
-    new chrome.Options().headless())
+    //to run via docker
+    .usingServer('http://localhost/wd/hub/')
+    //to run locally 
+    //.setChromeOptions(
+    //.new chrome.Options().headless())
     .build();
 
 const selectors = {
