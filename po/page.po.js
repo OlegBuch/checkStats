@@ -3,19 +3,19 @@ const chrome = require('selenium-webdriver/chrome');
 const { CREDS, URLS } = require('../settings/settings');
 let driver = new Builder().forBrowser('chrome')
     //to run via docker
-    .usingServer('http://localhost:4444/wd/hub/')
+    //.usingServer('http://localhost:4444/wd/hub/')
     //to run locally 
-    //.setChromeOptions(
-    //.new chrome.Options().headless())
+    /* .setChromeOptions(
+        new chrome.Options().headless()) */
     .build();
 
 const selectors = {
     inputUsername: By.name('username'),
     inputPassword: By.name('password'),
-    loginBtn: By.className('Button--3Zfc6'),
+    loginBtn: By.css('button:nth-child(2)'),
     defaultLink: By.css('.url--1isxt'),
-    runReportBtn: By.css('button.Button_primaryVariant--2m7ad'),
-    clicksValue: By.xpath('/html/body/div/div/div/div/section/div[1]/div[2]/div/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[13]')
+    runReportBtn: By.xpath('//*[@id="scroll-container"]/div[1]/div[2]/form/div/div/div/div[4]/div[2]/button'),
+    clicksValue: By.xpath('//*[@id="scroll-container"]/div[1]/div[2]/div/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[42]')
 }
 
 module.exports = class Page {
