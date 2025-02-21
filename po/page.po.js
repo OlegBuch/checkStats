@@ -14,8 +14,8 @@ const selectors = {
     inputPassword: By.name('password'),
     loginBtn: By.css('button:nth-child(2)'),
     defaultLink: By.css('.url--1isxt'),
-    runReportBtn: By.xpath('//*[@id="scroll-container"]/div[1]/div[2]/form/div/div/div/div[4]/div[2]/button'),
-    clicksValue: By.xpath('//*[@id="scroll-container"]/div[1]/div[2]/div/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[42]')
+    runReportBtn: By.xpath('//button[contains(text(), "Run Report")]'),
+    clicksValue: By.xpath('//div[contains(@class, "clicks-value-class")]')
 }
 
 module.exports = class Page {
@@ -24,7 +24,7 @@ module.exports = class Page {
     }
 
     async login(username, password) {
-        await driver.findElement(selectors.inputUsername).sendKeys(username, Key.TAB);;
+        await driver.findElement(selectors.inputUsername).sendKeys(username, Key.TAB);
         await driver.findElement(selectors.inputPassword).sendKeys(password, Key.TAB);
         await driver.findElement(selectors.loginBtn).click();
         await driver.wait(until.elementLocated(selectors.defaultLink), 3000);

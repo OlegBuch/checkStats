@@ -1,7 +1,7 @@
 const URLS = {
-    loginUrl: "https://stripcash.com/login",
-    statisticsUrl: "https://stripcash.com/analytics/statistics",
-    dashboardUrl: "https://stripcash.com/overview/dashboard"
+    loginUrl: "https://www.fastcash.com/login",
+    statisticsUrl: "https://www.fastcash.com/analytics/statistics",
+    dashboardUrl: "https://www.fastcash.com/overview/dashboard"
 };
 
 const CREDS = {
@@ -9,5 +9,5 @@ const CREDS = {
     password: ""
 }
 
-exports.CREDS = CREDS,
+exports.CREDS = CREDS
 exports.URLS = URLS;
