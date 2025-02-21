@@ -1,10 +1,9 @@
 `use strict`;
 
-const {LoginStatsPage, login, open, closeBrowser, getClickValues, openDashboardAndOpenLink} = require('../po/login-stats.po');
+const {login, open, closeBrowser, getClickValues, openDashboardAndOpenLink} = require('../po/login-stats.po');
 const {URLS, CREDS} =  require('../settings/settings');
 
 const assert = require("assert");
-
 
 describe(`Check that clicks value is increased`, () => {
     after((done) => {
